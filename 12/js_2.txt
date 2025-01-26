@@ -1,0 +1,22 @@
+			"use strict";
+			document.write("<p style='text-align:center'>Приклад знаходження більшого числа</p>");
+			let a = parseInt(prompt("Введи 1 число: ")); 
+            let b = parseInt(prompt("Введи 2 число: "));
+            let c = parseInt(prompt("Введи 3 число: ")); 
+			
+			if (a > b && a > c) {
+				document.write("Найбільше серед трьох чисел - 1. ", a);
+			} else if (b > c) {
+				document.write("Найбільше серед трьох чисел - 2. ", b);
+			} else if (c > a) {
+				document.write("Найбільше серед трьох чисел - 3. ", c);
+			} else {
+				document.write("Числа однакові");
+			}
+
+			let max = (a > b) ? a : b;
+			max = (max > c) ? max : c;
+			
+			if (a != b || b != c || a != c) {
+				document.write("<p>Значення найбільшого серед трьох чисел - ", max, "</p>");
+			}

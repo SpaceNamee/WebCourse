@@ -1,0 +1,32 @@
+<script>
+        function encryptText() {
+            // Отримуємо введений текст з textarea
+            let inputText = document.getElementById('inputText').value;
+
+            // Функція для шифрування
+            // inputText.split('') — розбиває рядок на масив символів.
+            let encryptedText = inputText.split('').map(char => {
+                // Перевіряємо, чи це літера
+                if (/[а-яА-Я]/.test(char)) {
+                    // тримуємо кодО символу
+                    let charCode = char.charCodeAt(0);
+
+                    // Якщо літера "я", заміняємо на "а"
+                    if (char === 'я') {
+                        return 'а';
+                    } else if (char === 'Я') {
+                        return 'А';
+                    }
+
+                    // Інакше додаємо 1 до коду символу (наступна літера)
+                    return String.fromCharCode(charCode + 1);
+                }
+                // Якщо це не літера, залишаємо символ без змін
+                return char;
+            // .join('') — знову збираємо масив символів в рядок.
+            }).join('');
+
+            // Вивести зашифрований текст
+            document.getElementById('outputText').textContent = encryptedText;
+        }
+    </script>

@@ -1,0 +1,15 @@
+        // Створюємо об'єкт з кількома властивостями
+        let car = {
+            brand: "Toyota",
+            model: "Corolla",
+            year: 2020,
+            color: "blue"
+        };
+        
+        let propertyInfo = "";
+        
+        // Цикл for...in перебирає властивості об'єкта
+        for (let propertyName in car) {
+            propertyInfo = propertyName + ": " + car[propertyName];
+            document.write(propertyInfo + "<br>");
+        }

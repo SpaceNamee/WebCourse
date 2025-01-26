@@ -1,0 +1,36 @@
+			let age = parseInt(prompt("Введіть вік cобаки в роках"));
+			switch (age) { 
+				case 1:
+                    document.write("Щенячий вік");
+					break;
+				case 2:
+                    document.write("Юнацький вік");
+                    break;
+                case 3:
+                    document.write("Юнацький вік");
+                    break;
+                case 4:
+                    document.write("Юнацький вік");
+                    break;
+				case 5:
+                    document.write("Юнацький вік");
+                    break; 
+                case 6:
+                    document.write("Юнацький вік");
+                    break;
+                case 7:
+                    document.write("Юнацький вік");
+                    break;
+                case 8:
+                    document.write("Старший вік");
+                    break;
+				case 9:
+                    document.write("Старший вік");
+                    break;
+                case 10: 
+                    document.write("Старший вік");
+                    break;
+				default: 
+                    document.write("Старість");
+                    break;
+			}

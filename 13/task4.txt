@@ -1,0 +1,6 @@
+<script>
+			function IReturnString(first_part, second_part) { 
+				return first_part + ' ' + second_part;
+			}
+			document.write("<h1>" + IReturnString('Привіт', 'Рейк') + "</h1>"); 
+		</script>

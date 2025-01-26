@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Бенькалович ПП-24</title>
+	</head>	
+	<body>
+		<script>
+			function mean(a, b, c, d, g, k) {
+				if (arguments.length > mean.length) {
+					alert("Щось пішло не так. Ознайомся з документацією");
+                    alert("Документація: Введи " +  mean.length  + " значень у функцію!!!");
+				} else {
+                    for (var i = 0; i < arguments.length; i++) { 
+                        document.write("<h1 style = 'color: blue'>" + arguments[i])
+			        }
+                }
+			}
+
+            mean(2,3,4,52);
+		</script>
+	</body>
+</html>

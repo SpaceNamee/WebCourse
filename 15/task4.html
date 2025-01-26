@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шифрування слів</title>
+</head>
+<body>
+    <h1>Програма для шифрування слів</h1>
+    <textarea id="inputText" rows="4" cols="50" placeholder="Введіть текст для шифрування"></textarea>
+    <br>
+    <button onclick="encryptText()">Шифрувати</button>
+    <p>Зашифрований текст:</p>
+    <span id="outputText"></span>
+
+    <script>
+        function encryptText() {
+            // Отримуємо введений текст з textarea
+            let inputText = document.getElementById('inputText').value;
+
+            // Функція для перемішування літер в слові
+            function shuffleWord(word) {
+                // Якщо слово дуже коротке (1 або 2 літери), то воно не змінюється
+                if (word.length <= 3) {
+                    return word;
+                }
+
+                // Беремо першу та останню літеру
+                let firstChar = word[0];
+                let lastChar = word[word.length - 1];
+
+                // Беремо середні літери (без першої та останньої)
+                let middle = word.slice(1, word.length - 1);
+
+                // Перемішуємо середні літери
+                middle = middle.split('').sort(() => Math.random() - 0.5).join('');
+
+                // Повертаємо нове слово: перша + перемішані середні літери + остання
+                return firstChar + middle + lastChar;
+            }
+
+            // Розбиваємо текст на слова
+            let words = inputText.split(' ');
+
+            // Перемішуємо літери в кожному слові
+            let encryptedWords = words.map(word => shuffleWord(word));
+
+            // Об'єднуємо зашифровані слова назад в текст
+            let encryptedText = encryptedWords.join(' ');
+
+            // Вивести зашифрований текст
+            document.getElementById('outputText').textContent = encryptedText;
+        }
+    </script>
+</body>
+</html>

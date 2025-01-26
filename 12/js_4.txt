@@ -1,0 +1,31 @@
+			document.write("<p>Використання оператора циклу	<b>FOR</b></p>");			
+			// Зведення числа x у ступінь
+			let x; // задане число
+            
+
+            
+            do {
+                x = parseInt(prompt("Введіть число x"));
+            } while (isNaN(x));
+
+            let factorial = 1;
+			for(let i = 1; i <= x; i++){
+                factorial *= i;
+            }
+
+            let start = true;
+            while (start) {
+                let s = prompt("Який я люблю колір?");
+
+                switch (s) {
+                    case "синій":
+                        document.write("Так! Мій улюблений колір — синій!");
+                        start = false;
+                        break;
+                    default:
+                        alert("Він небесного кольору.");
+                        break;
+                }
+            }            
+            
+            document.write("Результат: " +  x.toString() + "!" + "= " + factorial.toString() );	

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="u">
+<head>
+    <meta charset="UTF-8">
+    <title>Бенькалович, ПП-24</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        document.write(
+            "<p style='text-align:center'>Вибір мови за допомогою оператора <strong>IF</strong></p>"
+        );
+
+        let lang = prompt("Введіть код мови (ua, en, pl, de):", "ua");
+
+        if (lang === "ua") {
+            document.write("<div lang='ua' style='text-align:center'>Українська мова</div>");
+        } else if (lang === "en") {
+            document.write("<div lang='en' style='text-align:center'>English language</div>");
+        } else if (lang === "pl") {
+            document.write("<div lang='pl' style='text-align:center'>Język polski</div>");
+        } else if (lang === "de") {
+            document.write("<div lang='de' style='text-align:center'>Deutsch</div>");
+        } else {
+            document.write("Мову невизначено");
+        }
+    </script>
+</body>
+</html>

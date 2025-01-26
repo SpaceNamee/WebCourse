@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Шифрування</title>
+</head>
+<body>
+    <h1>Програма шифрування</h1>
+    <textarea id="inputText" rows="4" cols="50" placeholder="Введіть текст для шифрування"></textarea>
+    <br>
+    <button onclick="encryptText()">Шифрувати</button>
+    <p>Зашифрований текст:</p>
+    <span id="outputText"></span>
+
+    <script>
+        function encryptText() {
+            const ukrAlphabetLower = "абвгґдеєжзиіїйклмнопрстуфхцчшщьюя";
+            const ukrAlphabetUpper = "АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ";
+
+            // Отримуємо введений текст з textarea
+            let inputText = document.getElementById('inputText').value;
+
+            // Функція шифрування
+            let encryptedText = inputText.split('').map(char => {
+                // Перевіряємо, чи символ є малою літерою українського алфавіту
+                if (ukrAlphabetLower.includes(char)) {
+                    let index = ukrAlphabetLower.indexOf(char);
+                    return ukrAlphabetLower[(index + 1) % ukrAlphabetLower.length];
+                }
+
+                // Перевіряємо, чи символ є великою літерою українського алфавіту
+                if (ukrAlphabetUpper.includes(char)) {
+                    let index = ukrAlphabetUpper.indexOf(char);
+                    return ukrAlphabetUpper[(index + 1) % ukrAlphabetUpper.length];
+                }
+
+                // Якщо це не літера, залишаємо символ без змін
+                return char;
+            }).join('');
+
+            // Вивести зашифрований текст
+            document.getElementById('outputText').textContent = encryptedText;
+        }
+    </script>
+</body>
+</html>

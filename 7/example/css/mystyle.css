@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-size: 20px;
+}
+
+
+
+.modal-content {
+  border: 5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3rem;
+}
+
+.modal-backdrop {
+  background-color: #f00;
+}
+

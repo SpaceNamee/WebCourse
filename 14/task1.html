@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бенькалович ПП-24</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 1. Створення масиву трикутних чисел
+        let treag = [];
+        for (let n = 1; n <= 10; n++) {
+            treag.push(n * (n + 1) / 2);
+        }
+        // Виведення масиву трикутних чисел
+        document.write("<p><strong>Масив трикутних чисел:</strong> ");
+        document.write(treag.join("  "));
+        document.write("</p>");
+
+        // 2. Створення масиву квадратів чисел від 1 до 10
+        let kvd = [];
+        for (let i = 1; i <= 10; i++) {
+            kvd.push(i * i);
+        }
+        // Виведення масиву квадратів
+        document.write("<p><strong>Масив квадратів чисел:</strong> ");
+        document.write(kvd.join("  "));
+        document.write("</p>");
+
+        // 3. Об'єднання масивів treag і kvd в масив rez
+        let rez = treag.concat(kvd);
+        // Виведення об'єднаного масиву
+        document.write("<p><strong>Об'єднаний масив:</strong> ");
+        document.write(rez.join("  "));
+        document.write("</p>");
+
+        // 4. Сортування масиву rez у зворотному порядку
+        rez.sort((a, b) => b - a);  // Сортуємо за спаданням
+        // Виведення відсортованого масиву
+        document.write("<p><strong>Масив після сортування у зворотному порядку:</strong> ");
+        document.write(rez.join("  "));
+        document.write("</p>");
+    </script>
+
+</body>
+</html>

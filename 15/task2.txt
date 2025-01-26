@@ -1,0 +1,31 @@
+        function processText() {
+            // текст з textarea
+            let inputText = document.getElementById('inputText').value;
+            let cleanedText = inputText.replace(/\s+/g, ' ').trim();
+            
+            // Текст розбивається на масив слів за допомогою методу .split(' '), який розділяє рядок по пробілах
+            let words = cleanedText.split(' ');
+
+            // Лічильник слів, що містять букву 'п'
+            let count = 0;
+
+            //Метод map() в JavaScript — це функція масивів, яка створює новий масив після застосування заданої функції до кожного елемента масиву.
+            // Проходимо через кожне слово
+            let processedWords = words.map(word => {
+                // Перевіряємо, чи є буква 'п' у слові
+                if (word.includes('п')) {
+                    count++;
+                }
+
+                // Повертаємо слово з комою після нього
+                return word + ',';
+            });
+
+            // З'єднуємо слова з комами
+            let resultText = processedWords.join(' ');
+
+            // Виводимо результат
+            document.getElementById('outputText').textContent = resultText;
+            document.getElementById('wordCount').textContent = `Кількість слів, що містять букву 'п': ${count}`;
+        }
+    </script>

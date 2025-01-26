@@ -1,0 +1,12 @@
+		<script>
+			function FinalSalary(salary, insure) { 
+				return salary - (salary * (insure/100));
+			}
+
+			function SalaryForYear(numberOfMonth, k) { 
+				return k * numberOfMonth;
+			}
+
+			let result = SalaryForYear(4, FinalSalary(20000, 10)); 
+			document.write("<h1 style='color: red; background-color: green;'>result = " + result + "</h1>");
+		</script>

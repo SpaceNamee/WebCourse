@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Китайська їжа</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+</head>
+<body>
+
+    <!-- Верхня частина сторінки -->
+    <header class="bg-danger text-white text-center py-3">
+        <h1>Китайська їжа</h1>
+        <p>Скуштуйте найкращі страви з Китаю</p>
+    </header>
+
+    <!-- Навігація -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Головна</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Меню</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Про нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Контакти</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Ліва колонка -->
+            <div class="col-md-4">
+                <h2>Популярні страви</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Пекінська качка</li>
+                    <li class="list-group-item">Смажений рис</li>
+                    <li class="list-group-item">Дим-сум</li>
+                    <li class="list-group-item">Лапша з яйцем</li>
+                </ul>
+            </div>
+
+            <!-- Центральна колонка -->
+            <div class="col-md-8 mb-3">
+                <h2>Наша історія</h2>
+                <p>Китайська кухня славиться своїм різноманіттям і неповторними смаками. Ми пропонуємо найкращі страви з різних регіонів Китаю.</p>
+
+                <h3>Залиште ваші побажання</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Ваше ім'я</label>
+                        <input type="text" class="form-control" id="name" placeholder="Введіть ваше ім'я">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Ваше повідомлення</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Ваше повідомлення"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="favoriteDish" class="form-label">Ваша улюблена страва</label>
+                        <select class="form-select" id="favoriteDish">
+                            <option>Пекінська качка</option>
+                            <option>Смажений рис</option>
+                            <option>Дим-сум</option>
+                            <option>Лапша з яйцем</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Відправити</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Нижня частина сторінки -->
+    <footer class="text-center">
+        <p>&copy; 2024 Китайська їжа. Всі права захищені. <i class="las la-crow"></i></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
+  

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бенькалович ПП-24</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        // 1. Створення масиву з 15 елементів з випадковими значеннями
+        let arr = [];
+        for (let i = 0; i < 15; i++) {
+            let value = Math.floor(Math.random() * 100) + 1;
+
+            for(let j = 0; j < arr.length; j++){
+                if (arr[j] == value){
+                    value = Math.floor(Math.random() * 100) + 1;
+                    j = 0;
+                }
+            }
+            arr.push(value);  // Числа від 1 до 100
+
+        }
+        
+        // Виведення масиву на екран
+        function Print(value){
+            document.write("<p><strong>" + value + ":</strong> ");
+            document.write(arr.join("  "));
+            document.write("</p>");
+        };
+
+        Print('Початковий масив');
+        let maxIndex = 0;
+        let minIndex = 0;
+        // 2. Знаходимо максимальний елемент і мінімальний 
+        function minAndMaxIndex(){
+            for (let i = 1; i < arr.length; i++) {
+            if (arr[i] > arr[maxIndex]) maxIndex = i;
+            if (arr[i] < arr[minIndex]) minIndex = i;
+        }
+        }
+
+        minAndMaxIndex();
+
+        document.write('<p>Максимальне значення: ' + arr[maxIndex] + '</p>');
+        document.write('<p>Мінімальне значення: ' + arr[minIndex] + '</p>');
+
+        // Заміна максимального елемента з останнім
+        [arr[maxIndex], arr[arr.length - 1]] = [arr[arr.length - 1], arr[maxIndex]];
+        minAndMaxIndex();
+        Print('Заміна максимального елемента з останнім');
+
+        // 3. Заміна мінімального елемента з попереднім
+        [arr[minIndex], arr[minIndex - 1]] = [arr[minIndex - 1], arr[minIndex]];
+        minAndMaxIndex();
+        Print('Заміна мінімального елемента з попереднім');
+
+        // 4. Заміна мінімального елемента з наступним
+        [arr[minIndex], arr[minIndex + 1]] = [arr[minIndex + 1], arr[minIndex]];
+        minAndMaxIndex();
+        Print('Заміна мінімального елемента з наступним');
+
+        // 5. Заміна максимального елемента з шостим елементом
+        [arr[maxIndex], arr[5]] = [arr[5], arr[maxIndex]];
+        minAndMaxIndex();
+        Print('Заміна максимального елемента з шостим елементом');
+        
+        // 6. Максимальний елемент замінюється на 1, останній отримує значення максимального елемента
+        arr[arr.length - 1] = arr[maxIndex];
+        arr[maxIndex] = 1;
+        minAndMaxIndex();
+        Print('Максимальний елемент замінюється на 1, останній отримує значення максимального елемента');
+        
+        // 7. Знайти мінімальний елемент, присвоїти його значення першому елементу масиву, 
+        // а замість мінімального елемента записати число 9999.
+        arr[0] = arr[maxIndex];
+        arr[minIndex] = 9999;
+        minAndMaxIndex();
+        Print('Значення мінімального елемента присвоюється першому елементу, а значення мінімального елементу змінюється на 9999');
+
+        //  поміняти мінімальний елемент місцями з третім елементом масиву.
+        [arr[minIndex], arr[2]] = [arr[2], arr[minIndex]];
+        minAndMaxIndex();
+        Print("Заміна мінімального елементу місцями з третім елементом масиву");
+
+        // 8. Мінімальний елемент замінюється на суму першого і останнього елементів
+        arr[minIndex] = arr[0] + arr[arr.length - 1];
+        minAndMaxIndex();
+        Print('Мінімальний елемент замінюється на суму першого і останнього елементів');
+
+        // 9. Заміна максимального елемента з передостаннім
+        if (maxIndex !== arr.length - 2) {
+            [arr[maxIndex], arr[arr.length - 2]] = [arr[arr.length - 2], arr[maxIndex]];
+        }
+        minAndMaxIndex();
+        Print("Заміна максимального елемента з передостаннім");
+        
+        // 10. Мінімальний елемент замінюється на 3N, де N - розмір масиву
+        arr[minIndex] = 3 * arr.length;
+        minAndMaxIndex();
+        Print(" Мінімальний елемент замінюється на 3N, де N - розмір масиву");
+        
+        
+        // 11. Заміна мінімального елемента з елементом масиву, номер якого задано        
+        let specifiedIndex = 2;
+        
+        [arr[minIndex], arr[specifiedIndex]] = [arr[specifiedIndex], arr[minIndex]];
+        minAndMaxIndex();
+        Print('Заміна мінімального елемента з елементом масиву, номер якого задано');
+        
+        // 12. Заміна максимального елемента зі значенням другого елемента
+        if (maxIndex !== 1) {
+            [arr[maxIndex], arr[1]] = [arr[1], arr[maxIndex]];
+        }
+        minAndMaxIndex();
+        Print('Заміна максимального елемента зі значенням другого елемента');
+
+        // 13. Заміна мінімального елемента з останнім
+        [arr[minIndex], arr[arr.length - 1]] = [arr[arr.length - 1], arr[minIndex]];
+        minAndMaxIndex();
+        Print('аміна мінімального елемента з останнім');
+
+        // 14. Заміна мінімального елемента з передостаннім
+        [arr[minIndex], arr[arr.length - 2]] = [arr[arr.length - 2], arr[minIndex]];
+        minAndMaxIndex();
+        Print('Заміна мінімального елемента з передостаннім');
+
+        // 15. Заміна мінімального елемента з третім елементом
+        [arr[minIndex], arr[2]] = [arr[2], arr[minIndex]];
+        minAndMaxIndex();
+        Print("Заміна мінімального елемента з третім елементом");
+
+        // Виведення результату після всіх операцій
+        Print("Модифікований масив");
+    </script>
+
+</body>
+</html>

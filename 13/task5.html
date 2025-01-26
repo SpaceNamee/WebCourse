@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Бенькалович ПП-24</title>
+	</head>	
+	<body>
+		<script>
+            function calculateDiscount(price,insure, discount = 0.1, tax = 0.2) {
+
+            const discountedPrice = price - (price * discount);
+            const finalPrice = discountedPrice + (discountedPrice * tax);
+            const incomeWithInsure = price - price * (insure / 100); 
+            
+            alert("Фінальна ціна: " + finalPrice);
+            alert("Прибуток з врахуванням податків: " + incomeWithInsure);
+            }
+
+            calculateDiscount(2000, 20);
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Бенькалович, ПП-24</title>
+</head>  
+<body>
+    <h1>Демонстрація циклу for...in</h1>
+    <script> 
+        "use strict";
+        
+        // Створюємо об'єкт з кількома властивостями
+        let car = {
+            brand: "Toyota",
+            model: "Corolla",
+            year: 2020,
+            color: "blue"
+        };
+        
+        let propertyInfo = "";
+        
+        // Цикл for...in перебирає властивості об'єкта
+        for (let propertyName in car) {
+            propertyInfo = propertyName + ": " + car[propertyName];
+            document.write(propertyInfo + "<br>");
+        }
+    </script>
+</body>
+</html>

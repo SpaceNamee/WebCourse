@@ -1,0 +1,111 @@
+        /* Основні стилі */
+        body {
+            max-width: 1180px;
+            font-family: Arial, sans-serif;
+            background-color: #4b0f0f;
+            margin: auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #03ae00;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #c3ea00;
+            margin-top: 30px;
+            border-bottom: 2px solid #c0ff04;
+            padding-bottom: 10px;
+        }
+
+        /* Accordion */
+        #accordion {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        #accordion:focus {
+            background: #0b021c;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        #accordion h3 {
+            background: #e1e1e1;
+            margin: 0;
+            padding: 10px;
+            cursor: pointer;
+            color: #fe3f3f;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #accordion div {
+            padding: 15px;
+            border-top: 1px solid #ddd;
+            height: 300px;
+        }
+
+        /* Datepicker */
+        #datepicker {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 200px;
+            margin-bottom: 20px;
+            display: block;
+            transition: border-color 0.3s;
+        }
+
+        /* Tabs */
+        #tabs {
+            margin-top: 20px;
+            height: auto;
+
+        }
+
+        #tabs ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #tabs ul li {
+            margin-right: 5px;
+        }
+
+        #tabs ul li a {
+            text-decoration: none;
+            padding: 10px 15px;
+            background: #007bff;
+            color: white;
+            border-radius: 4px 4px 0 0;
+            transition: background-color 0.3s;
+        }
+
+        #tabs ul li a:hover {
+            background: #0056b3;
+        }
+
+        #tabs div {
+            padding: 15px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 0 0 4px 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        img{
+            width: 100px;
+            height: 300px;
+            object-fit: cover;
+        }
+ 

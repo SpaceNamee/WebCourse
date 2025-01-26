@@ -1,0 +1,23 @@
+        // Визначаємо правильне слово
+        let secretWord = "гречка";  
+        let f = true; 
+        let userGuess; 
+        let attemptCount = 0;
+        let answer = confirm("Хочеш зіграти? Вгадай слово!");
+
+        if (answer) {
+            while (f) {
+                // Користувач вводить своє припущення
+                userGuess = prompt("Введіть слово:");
+                attemptCount++;
+                
+                if (userGuess === secretWord) {
+                    alert("Вітаємо! Ви вгадали слово!\nКількість спроб: " + attemptCount);
+                    f = false; // Завершуємо гру, якщо слово вгадано
+                } else {
+                    alert("Неправильно. Спробуйте ще раз. На англійській мові це buckwheat ");
+                }
+            }
+        } else {
+            alert("Шкода! Може бути в інший раз.");
+        }

@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Бенькалович ПП-24</title>    
+	</head>	
+	<body>
+		<script>
+			function factorial(value) { 
+				if(value === 1 || value === 0){
+                    return 1;
+                }else{
+                    return value * factorial(value - 1);
+                }
+			}
+            let value = parseInt(prompt('Привіт, введи число для обрахунку факторіалу: '));
+			alert("Відповідь: " + factorial(value));
+		</script>
+	</body>
+</html>

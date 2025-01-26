@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Бенькалович ПП-24</title>
+	</head>	
+	<body>
+		<script>
+			"use strict";
+            let day;
+            let month;
+            let year;
+            let check = true;
+            const currentDate = new Date();
+
+            do {
+                day = parseInt(prompt("Привіт, введи свій День народження: "));
+                if (day <= 31 && day >= 1) {
+                    check = false;
+                }
+            } while (check);
+            check = true;
+
+            do {
+                month = parseInt(prompt("Введи місяць народження: "));
+                if (month <= 12 && month >= 1) {
+                    check = false;
+                }
+            } while (check);
+            check = true;
+
+            do {
+                year = parseInt(prompt("Введи рік народження: "));
+                if (year <= currentDate.getFullYear()) {
+                    check = false;
+                }
+            } while (check);
+
+        function calculateDaysLived(birthDate) {
+            const timeDifference = currentDate - birthDate;
+                    
+            const daysLived = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                    
+            return daysLived;
+        }
+
+        const birthDate = new Date(year, month+1, day);
+
+        alert('Ти живеш ' + calculateDaysLived(birthDate) + " днів"); 
+
+		</script>
+	</body>
+</html>
